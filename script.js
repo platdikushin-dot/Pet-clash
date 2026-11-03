@@ -1,5 +1,16 @@
 const tg = window.Telegram?.WebApp;
-if (tg) { tg.ready(); tg.expand(); }
+
+if (tg) {
+  tg.ready();
+  tg.expand();
+
+  tg.setHeaderColor("#17172b");
+  tg.setBackgroundColor("#17172b");
+
+  if (tg.requestFullscreen) {
+    tg.requestFullscreen();
+  }
+}
 
 const cards = {
  dog: [
