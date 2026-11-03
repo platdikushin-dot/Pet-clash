@@ -8,8 +8,16 @@ if (tg) {
   tg.setBackgroundColor("#17172b");
 
   if (tg.requestFullscreen) {
-    tg.requestFullscreen();
-  }
+  tg.onEvent("fullscreenChanged", () => {
+    console.log("Полный экран:", tg.isFullscreen);
+  });
+
+  tg.onEvent("fullscreenFailed", (event) => {
+    alert("Не удалось включить полный экран: " + event.error);
+  });
+
+  tg.requestFullscreen();
+}
 }
 
 const cards = {
