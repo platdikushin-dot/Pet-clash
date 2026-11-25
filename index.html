@@ -680,7 +680,7 @@ $('#modal').onclick = e => { if (e.target.id === 'modal') $('#modal').classList.
 
 
 // ---- Заявка на подарок ----
-const API_URL = 'https://roclash.platdikushin.workers.dev'; // например https://ro-clash.твой-ник.workers.dev
+const API_URL = 'https://worker.platdikushin.workers.dev/'; // например https://ro-clash.твой-ник.workers.dev
 const PRICES = { bear: 5000, rose: 8000, rocket: 16000, diamond: 32000 };
 const escH = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 // запрос к серверу; всегда возвращает объект { ok, ... }
